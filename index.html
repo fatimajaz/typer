@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping Typewriter Productivity Quote</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: clear;
+            font-family: 'Courier New', Courier, monospace; /* Classic computer font */
+            color: #00FF00; /* Green, computer-like text */
+            overflow: hidden;
+        }
+
+        .quote-container {
+            font-size: 24px;
+            color: #0000FF;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #00FF00;
+            width: 0;
+            animation: typing 5s steps(50, end) infinite, blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            0% { width: 0; }
+            80% { width: 100%; }
+            90%, 100% { width: 0; } /* Reset width back to 0 */
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #00FF00; }
+        }
+    </style>
+</head>
+<body>
+    <div class="quote-container">
+        "When You Feel Like Quitting, Remember Why You Started"
+    </div>
+</body>
+</html>
